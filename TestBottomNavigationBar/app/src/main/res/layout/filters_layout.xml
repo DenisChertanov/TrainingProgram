@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_dark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filters_layout_title_cl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/filter_title_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/filter_layout_top_stroke"
+            android:layout_width="40dp"
+            android:layout_height="3.3dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/filter_top_stroke_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/filters_layout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/filter"
+            android:textAppearance="@style/Style16sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filter_layout_top_stroke" />
+
+        <TextView
+            android:id="@+id/filter_layout_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:text="@string/cancel"
+            android:textAppearance="@style/Style14sp"
+            android:textColor="@color/default_orange"
+            app:layout_constraintBottom_toBottomOf="@id/filters_layout_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/filter_stroke_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/filters_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/apply_cl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filters_layout_title_cl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/filter_main_color">
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/training_type_cl"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/training_type_title"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="13.5dp"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:text="@string/training_type"-->
+<!--                    android:textAppearance="@style/Style14sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/training_type_all"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="18dp"-->
+<!--                    android:text="@string/all"-->
+<!--                    android:textAppearance="@style/Style14sp"-->
+<!--                    android:textColor="@color/default_orange"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/training_type_title"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/in_gym"-->
+<!--                    android:layout_width="166dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginStart="21dp"-->
+<!--                    android:layout_marginTop="19dp"-->
+<!--                    android:background="@drawable/filter_type_background"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/in_gym"-->
+<!--                    android:textAppearance="@style/Style14sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/training_type_title" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/in_street"-->
+<!--                    android:layout_width="86dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:background="@drawable/filter_type_background"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/in_street"-->
+<!--                    android:textAppearance="@style/Style14sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/in_gym"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/in_gym" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/at_home"-->
+<!--                    android:layout_width="64dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginStart="21dp"-->
+<!--                    android:layout_marginTop="7dp"-->
+<!--                    android:background="@drawable/filter_type_background"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/at_home"-->
+<!--                    android:textAppearance="@style/Style14sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/in_gym" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/without_equipment"-->
+<!--                    android:layout_width="151dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:background="@drawable/filter_type_background"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/without_equipment"-->
+<!--                    android:textAppearance="@style/Style14sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/at_home"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/at_home" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/with_equipment"-->
+<!--                    android:layout_width="151dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginStart="21dp"-->
+<!--                    android:layout_marginTop="7dp"-->
+<!--                    android:background="@drawable/filter_type_background"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/with_equipment"-->
+<!--                    android:textAppearance="@style/Style14sp"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/at_home" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0.5dp"-->
+<!--                    android:layout_marginStart="13.5dp"-->
+<!--                    android:layout_marginTop="21dp"-->
+<!--                    android:background="@color/filter_stroke_color"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/with_equipment" />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chest_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/chest_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/chest"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/chest_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/chest_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/big_chest"
+                    android:layout_width="139dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/big_chest"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chest_title" />
+
+                <TextView
+                    android:id="@+id/small_chest"
+                    android:layout_width="125dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/small_chest"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/big_chest"
+                    app:layout_constraintStart_toEndOf="@id/big_chest" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/big_chest" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/biceps_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chest_cl">
+
+                <TextView
+                    android:id="@+id/biceps_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/biceps"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/biceps_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/biceps_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/humeral"
+                    android:layout_width="86dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/humeral"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/biceps_title" />
+
+                <TextView
+                    android:id="@+id/short_bundle"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/short_bundle"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/humeral"
+                    app:layout_constraintStart_toEndOf="@id/humeral" />
+
+                <TextView
+                    android:id="@+id/long_bundle"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/long_bundle"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/humeral" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/long_bundle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/triceps_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/biceps_cl">
+
+                <TextView
+                    android:id="@+id/triceps_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/triceps"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/triceps_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/triceps_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/lateral_bundle"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/lateral_bundle"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/triceps_title" />
+
+                <TextView
+                    android:id="@+id/triceps_long_bundle"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/long_bundle"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/lateral_bundle"
+                    app:layout_constraintStart_toEndOf="@id/lateral_bundle" />
+
+                <TextView
+                    android:id="@+id/middle_bundle"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/middle_bundle"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lateral_bundle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/middle_bundle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/back_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/triceps_cl">
+
+                <TextView
+                    android:id="@+id/back_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/back"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/back_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/back_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/small_round"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/small_round"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/back_title" />
+
+                <TextView
+                    android:id="@+id/big_round"
+                    android:layout_width="135dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/big_round"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/small_round"
+                    app:layout_constraintStart_toEndOf="@id/small_round" />
+
+                <TextView
+                    android:id="@+id/infraspinatus"
+                    android:layout_width="96dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/infraspinatus"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/small_round" />
+
+                <TextView
+                    android:id="@+id/diamond_shaped"
+                    android:layout_width="113dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/diamond_shaped"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/infraspinatus"
+                    app:layout_constraintStart_toEndOf="@id/infraspinatus" />
+
+                <TextView
+                    android:id="@+id/spine_extensor"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/spine_extensor"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/infraspinatus" />
+
+                <TextView
+                    android:id="@+id/latissimus_dorsi"
+                    android:layout_width="208dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/latissimus_dorsi"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spine_extensor" />
+
+                <TextView
+                    android:id="@+id/external_oblique"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/external_oblique"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/latissimus_dorsi" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/external_oblique" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/shoulders_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back_cl">
+
+                <TextView
+                    android:id="@+id/shoulders_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/shoulders"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shoulders_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/shoulders_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/front_delta"
+                    android:layout_width="139dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/front_delta"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shoulders_title" />
+
+                <TextView
+                    android:id="@+id/middle_delta"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/middle_delta"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/front_delta"
+                    app:layout_constraintStart_toEndOf="@id/front_delta" />
+
+                <TextView
+                    android:id="@+id/rear_delta"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/rear_delta"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/front_delta" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rear_delta" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hip_biceps_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shoulders_cl">
+
+                <TextView
+                    android:id="@+id/hip_biceps_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/hip_biceps"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/hip_biceps_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/hip_biceps_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/biceps_femoris"
+                    android:layout_width="190dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/biceps_femoris"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hip_biceps_title" />
+
+                <TextView
+                    android:id="@+id/thin"
+                    android:layout_width="71dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/thin"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/biceps_femoris"
+                    app:layout_constraintStart_toEndOf="@id/biceps_femoris" />
+
+                <TextView
+                    android:id="@+id/leading"
+                    android:layout_width="116dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/leading"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/biceps_femoris" />
+
+                <TextView
+                    android:id="@+id/semitendinosus"
+                    android:layout_width="145dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/semitendinosus"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/leading"
+                    app:layout_constraintStart_toEndOf="@id/leading" />
+
+                <TextView
+                    android:id="@+id/semi_membranous"
+                    android:layout_width="149dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/semi_membranous"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/leading" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/semi_membranous" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/thigh_quads_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hip_biceps_cl">
+
+                <TextView
+                    android:id="@+id/thigh_quads_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/thigh_quads"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/thigh_quads_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/thigh_quads_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/rectus_femoris"
+                    android:layout_width="168dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/rectus_femoris"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/thigh_quads_title" />
+
+                <TextView
+                    android:id="@+id/thigh_quads_thin"
+                    android:layout_width="71dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/thin"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/rectus_femoris"
+                    app:layout_constraintStart_toEndOf="@id/rectus_femoris" />
+
+                <TextView
+                    android:id="@+id/tailor"
+                    android:layout_width="106dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/tailor"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rectus_femoris" />
+
+                <TextView
+                    android:id="@+id/long_leading"
+                    android:layout_width="168dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/long_leading"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/tailor"
+                    app:layout_constraintStart_toEndOf="@id/tailor" />
+
+                <TextView
+                    android:id="@+id/comb"
+                    android:layout_width="106dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/comb"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tailor" />
+
+                <TextView
+                    android:id="@+id/broad_medial"
+                    android:layout_width="166dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/broad_medial"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/comb"
+                    app:layout_constraintStart_toEndOf="@id/comb" />
+
+                <TextView
+                    android:id="@+id/wide_lateral"
+                    android:layout_width="168dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/wide_lateral"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/comb" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/wide_lateral" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/press_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thigh_quads_cl">
+
+                <TextView
+                    android:id="@+id/press_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="21dp"
+                    android:text="@string/press"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/press_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="18dp"
+                    android:text="@string/all"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/default_orange"
+                    app:layout_constraintBottom_toBottomOf="@id/press_title"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/anterior_dentate"
+                    android:layout_width="149dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/anterior_dentate"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/press_title" />
+
+                <TextView
+                    android:id="@+id/outer_oblique"
+                    android:layout_width="129dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/outer_oblique"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/anterior_dentate"
+                    app:layout_constraintStart_toEndOf="@id/anterior_dentate" />
+
+                <TextView
+                    android:id="@+id/rectus_abdominis_muscle"
+                    android:layout_width="177dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/filter_type_background"
+                    android:gravity="center"
+                    android:text="@string/rectus_abdominis_muscle"
+                    android:textAppearance="@style/Style14sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/anterior_dentate" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="13.5dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@color/filter_stroke_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rectus_abdominis_muscle"
+                    android:visibility="gone"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/apply_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/filter_main_color">
+
+        <TextView
+            android:id="@+id/apply"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/apply_button_background"
+            android:gravity="center"
+            android:text="@string/apply"
+            android:textAppearance="@style/Style16sp"
+            android:textColor="@color/default_light_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

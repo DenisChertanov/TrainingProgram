@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_dark"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/add_set_layout_weight_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/ic_weight30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_exercise_set_editing_toolbar" />
+
+    <EditText
+        android:id="@+id/add_set_layout_weight_et"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/add_set_layout_weight_ic"
+        app:layout_constraintStart_toEndOf="@id/add_set_layout_weight_ic" />
+
+    <TextView
+        android:id="@+id/add_set_layout_weight_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/kg"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/add_set_layout_weight_ic"
+        app:layout_constraintStart_toEndOf="@id/add_set_layout_weight_et" />
+
+    <ImageView
+        android:id="@+id/add_set_layout_count_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="33dp"
+        android:src="@drawable/ic_countdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_set_layout_weight_ic" />
+
+    <EditText
+        android:id="@+id/add_set_layout_count_et"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/add_set_layout_count_ic"
+        app:layout_constraintStart_toEndOf="@id/add_set_layout_count_ic" />
+
+    <TextView
+        android:id="@+id/add_set_layout_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/cnt"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/add_set_layout_count_ic"
+        app:layout_constraintStart_toEndOf="@id/add_set_layout_count_et" />
+
+    <ImageView
+        android:id="@+id/add_set_layout_timer_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="33dp"
+        android:src="@drawable/ic_timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_set_layout_count_ic" />
+
+    <EditText
+        android:id="@+id/add_set_layout_timer_et"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/add_set_layout_timer_ic"
+        app:layout_constraintStart_toEndOf="@id/add_set_layout_timer_ic" />
+
+    <TextView
+        android:id="@+id/add_set_layout_timer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/sec"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/add_set_layout_timer_ic"
+        app:layout_constraintStart_toEndOf="@id/add_set_layout_timer_et" />
+
+    <TextView
+        android:id="@+id/add_set_layout_save"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="62dp"
+        android:height="40dp"
+        android:background="@drawable/save_button_background"
+        android:gravity="center"
+        android:text="@string/edit"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_set_layout_timer_ic" />
+
+    <TextView
+        android:id="@+id/add_set_layout_delete"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:height="40dp"
+        android:background="@drawable/delete_button_background"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_set_layout_save" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_exercise_set_editing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/tool_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

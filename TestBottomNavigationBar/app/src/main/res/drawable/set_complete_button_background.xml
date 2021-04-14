@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <stroke android:color="@color/set_complete_button_stroke_color" android:width="1dp"/>
+            <solid android:color="@color/set_complete_button_color" />
+        </shape>
+    </item>
+
+</selector>

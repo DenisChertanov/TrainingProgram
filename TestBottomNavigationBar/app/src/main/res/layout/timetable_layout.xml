@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="9dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="9dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/default_dark">
+
+    <TextView
+        android:id="@+id/timetable_layout_dayofweek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/DayOfWeekStyle"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timetable_layout_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/timetable_dayofweek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timetable_layout_dayofweek">
+
+        <TextView
+            android:id="@+id/left_side_rectangle_textview"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="@drawable/left_side_rectangle"
+            app:layout_constraintBottom_toBottomOf="@id/timetable_Layout_linearlayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/timetable_Layout_linearlayout" />
+
+        <LinearLayout
+            android:id="@+id/timetable_Layout_linearlayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/left_side_rectangle_textview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timetable_layout_add_exercise_cl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/training_exercise_success_addset_backgroud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timetable_layout_cl">
+
+        <ImageView
+            android:id="@+id/training_exercise_success_addimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/ic_add18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/add_exercise"
+            android:textAppearance="@style/AddSetStyle"
+            android:textColor="@color/add_set_color"
+            app:layout_constraintStart_toEndOf="@id/training_exercise_success_addimage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

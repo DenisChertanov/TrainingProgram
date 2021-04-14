@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_bottom_nav__search"
+        android:contentDescription="@string/search"
+        android:icon="@drawable/ic_loupe"
+        android:title="@string/search" />
+
+    <item
+        android:id="@+id/menu_bottom_nav__trainings"
+        android:contentDescription="@string/training"
+        android:icon="@drawable/ic_dumbbell"
+        android:title="@string/training" />
+
+    <item
+        android:id="@+id/menu_bottom_nav__timetable"
+        android:contentDescription="@string/timetable"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/timetable" />
+
+    <item
+        android:id="@+id/menu_bottom_nav__account"
+        android:contentDescription="@string/account"
+        android:icon="@drawable/ic_user"
+        android:title="@string/account" />
+
+</menu>

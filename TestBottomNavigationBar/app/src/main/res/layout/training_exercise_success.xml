@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/default_dark"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:paddingTop="30dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/training_exercise_success_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:maxWidth="280dp"
+        android:textAppearance="@style/TrainingExerciseSuccessTitle"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/training_exercise_success_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ic_question"
+        app:layout_constraintStart_toEndOf="@id/training_exercise_success_title"
+        app:layout_constraintTop_toTopOf="@id/training_exercise_success_title" />
+
+    <LinearLayout
+        android:id="@+id/training_exercise_success_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="9dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/training_exercise_success_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/training_exercise_success_addset_constrainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="9dp"
+        android:background="@drawable/training_exercise_success_addset_backgroud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/training_exercise_success_linearlayout">
+
+        <ImageView
+            android:id="@+id/training_exercise_success_addimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/ic_add18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/add_set"
+            android:textAppearance="@style/AddSetStyle"
+            android:textColor="@color/add_set_color"
+            app:layout_constraintStart_toEndOf="@id/training_exercise_success_addimage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/training_exercise_success_note_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="42dp"
+        android:text="@string/note"
+        android:textAppearance="@style/TrainingsFragmentTitle"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/training_exercise_success_addset_constrainlayout" />
+
+    <EditText
+        android:id="@+id/training_exercise_success_note"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/note_backgroud"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:textAppearance="@style/Style14sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/training_exercise_success_note_textview" />
+
+    <TextView
+        android:id="@+id/training_exercise_success_note_done"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/apply_button_background"
+        android:gravity="center"
+        android:text="@string/done"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/training_exercise_success_note" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

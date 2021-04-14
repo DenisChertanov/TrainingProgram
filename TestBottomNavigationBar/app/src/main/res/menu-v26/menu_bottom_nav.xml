@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_bottom_nav__search"
+        android:icon="@drawable/ic_loupe"
+        android:contentDescription="@string/search"
+        android:title="@string/search"
+        android:iconTint="@color/default_light_grey"/>
+
+    <item
+        android:id="@+id/menu_bottom_nav__trainings"
+        android:icon="@drawable/ic_dumbbell"
+        android:contentDescription="@string/training"
+        android:title="@string/training"
+        />
+
+    <item
+        android:id="@+id/menu_bottom_nav__timetable"
+        android:icon="@drawable/ic_calendar"
+        android:contentDescription="@string/timetable"
+        android:title="@string/timetable"
+        />
+
+    <item
+        android:id="@+id/menu_bottom_nav__account"
+        android:icon="@drawable/ic_user"
+        android:contentDescription="@string/account"
+        android:title="@string/account"
+        />
+
+</menu>

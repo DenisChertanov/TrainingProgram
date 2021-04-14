@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_dark"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/fragment_trainings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/tool_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/fragment_trainings_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/training"
+        android:textAppearance="@style/TrainingsFragmentTitle"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_trainings_toolbar" />
+
+    <ImageView
+        android:id="@+id/fragment_trainings_add_button"
+        android:src="@drawable/ic_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_trainings_toolbar"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="13dp"/>
+
+    <TextView
+        android:id="@+id/fragment_trainins_title_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/trainings_fragment_title_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_trainings_toolbar" />
+
+    <EditText
+        android:id="@+id/fragment_trainings_edittext"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="11dp"
+        android:autofillHints=""
+        android:background="@drawable/search_edittext_background"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="5dp"
+        android:textAppearance="@style/EditTextStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_trainins_title_line" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_trainings_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="115dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_trainings_edittext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

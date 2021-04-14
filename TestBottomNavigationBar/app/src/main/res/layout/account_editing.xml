@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_dark"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/account_editing_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/first_name"
+        android:textAppearance="@style/Style18sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_toolbar" />
+
+    <EditText
+        android:id="@+id/account_editing_name_edit"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_first_name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/account_editing_second_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/second_name"
+        android:textAppearance="@style/Style18sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_first_name" />
+
+    <EditText
+        android:id="@+id/account_editing_second_name_edit"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_second_name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/account_editing_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/username"
+        android:textAppearance="@style/Style18sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_second_name" />
+
+    <EditText
+        android:id="@+id/account_editing_second_username_edit"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_username"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/account_editing_age_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/ic_age"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_username" />
+
+    <EditText
+        android:id="@+id/account_editing_age_edit"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_age_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_age_ic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/age"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_age_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_age_edit" />
+
+    <ImageView
+        android:id="@+id/account_editing_weight_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/ic_weight30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_age_ic" />
+
+    <EditText
+        android:id="@+id/account_editing_weight_edit"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_weight_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_weight_ic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/kg"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_weight_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_weight_edit" />
+
+    <ImageView
+        android:id="@+id/account_editing_height_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/ic_height"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_weight_ic" />
+
+    <EditText
+        android:id="@+id/account_editing_height_edit"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_height_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_height_ic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/cm"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_height_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_height_edit" />
+
+    <ImageView
+        android:id="@+id/account_editing_percent_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/ic_percent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_height_ic" />
+
+    <EditText
+        android:id="@+id/account_editing_percent_edit"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:inputType="text"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_percent_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_percent_ic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="@string/percent"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintBottom_toBottomOf="@id/account_editing_percent_ic"
+        app:layout_constraintStart_toEndOf="@id/account_editing_percent_edit" />
+
+    <TextView
+        android:id="@+id/account_editing_save"
+        android:layout_width="132dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="62dp"
+        android:height="40dp"
+        android:background="@drawable/save_button_background"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textAppearance="@style/Style16sp"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/account_editing_percent_ic" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/account_editing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/tool_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

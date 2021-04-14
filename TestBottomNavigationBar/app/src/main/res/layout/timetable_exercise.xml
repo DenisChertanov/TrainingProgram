@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/timetable_exercise_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textAppearance="@style/TimeTableExerciseTitle"
+        android:textColor="@color/default_light_grey"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="17dp"
+        />
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_next"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="21dp"/>
+
+    <TextView
+        android:id="@+id/timetable_exercise_bottom_stroke"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/timetable_exercise_bottom_line_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
